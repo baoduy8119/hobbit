@@ -1,0 +1,103 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    transition: left 0.2s, right 0.2s;
+    text-transform: uppercase;
+    @media screen and (min-width: 992px) {
+        position: absolute;
+        top: 50px;
+    }
+    .toggle-menu  {
+        color: white;
+        font-size: 28px;
+    }
+    .nav-link {
+        font-size: 20px;
+        color: white;
+    }
+    .nav-inner {
+        max-width: 1370px;
+        width: 100%;
+        height: 72px;
+        background: url(../images/header-bg.png) no-repeat bottom center;
+        background-size: cover;
+        transition: all 0.2s;
+        padding: 0 30px 0 20px;
+    }
+    &.fixed {
+        @media screen and (min-width: 992px) {
+            position: fixed;
+            top: 0;
+            left: -20px;
+            right: -20px;
+            max-width: 102%;
+            .nav-inner {
+                max-width: 100%;
+                padding: 0 40px 5px;
+            }
+        }
+    }
+    .logo {
+        img {
+            width: 164px;
+            height: 51px;
+        }
+    }
+    .nav-mobile {
+        height: 100%;
+        li {
+            display: inline-block;
+        }
+        .btn-close {
+            i {
+                font-size: 36px;
+                color: white;
+            }
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        @media screen and (max-width: 1024px) {
+            text-align: right;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 300px !important;
+            transform: translateX(100%);
+            background-color: rgba(87, 64, 48, 0.8);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s;
+            z-index: 10;
+            &.show {
+                transform: translateX(0);
+            }
+            .nav {
+                display: block;
+            }
+            ul {
+                margin-top: 20px;
+            }
+            li {
+                margin: 25px 10px;
+                @media screen and (max-width: 767px) {
+                    margin: 10px 0;
+                    width: 100%;
+                    .nav-link {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .dgg-btn {
+                margin-right: 40px;
+            }
+        }
+    }
+}

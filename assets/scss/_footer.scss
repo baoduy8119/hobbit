@@ -1,0 +1,17 @@
+footer {
+    padding: 50px 0;
+    text-align: center;
+    background: #223420 url(../images/footer-bg.png) no-repeat center center;
+    @media screen and (min-width: 992px) {
+        background-size: 100%;
+    }
+    img {
+        width: 220px;
+    }
+    .copyright {
+        margin-top: 20px;
+        padding-bottom: 20px;
+        color: #907461;
+        font-size: 16px;
+    }
+}
