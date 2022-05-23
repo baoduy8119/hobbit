@@ -63,12 +63,12 @@ header {
     }
     &.auto-hide {
         @media screen and (max-width: 1024px) {
-            transform: translateY(-90px);
+            transform: translate3d(0, -90px, 0);
         }
     }
     &.auto-show {
         @media screen and (max-width: 1024px) {
-            transform: translateY(0);
+            transform: translate3d(0, 0, 0);
         }
     }
     &.fixed {
