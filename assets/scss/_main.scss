@@ -4,8 +4,26 @@
     background-size: cover;
     // min-height: 1400px;
     img {
+        position: relative;
+        z-index: 1;
         margin-top: 120px;
         padding: 150px 0;
+    }
+    .video-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        video {
+            @media screen and (min-width: 1800px) {
+                width: 100%;
+            }
+            @media screen and (max-width: 1799px) {
+                height: 100%
+            }
+        }
     }
     &::after {
         content: "";
