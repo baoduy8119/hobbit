@@ -43,11 +43,11 @@ $(function () {
         
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-            $("header").removeClass('auto-show')
-            $("header").addClass('auto-hide')
-        } else {
             $("header").removeClass('auto-hide')
             $("header").addClass('auto-show')
+        } else {
+            $("header").removeClass('auto-show')
+            $("header").addClass('auto-hide')
         }
         prevScrollpos = currentScrollPos;
     });
